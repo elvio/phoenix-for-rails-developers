@@ -1,0 +1,21 @@
+<h1><%= @book.title %></h1>
+
+<div class="book book-hero">
+  <img class="book__image" src="<%= @book.image_url %>">
+
+  <p class="book__description">
+    <%= @book.description %>
+  </p>
+</div>
+
+<div class="value-tag">
+  <h2 class="value-tag__title">price</h2>
+  <span class="value-tag__content"><%= format_price(@book.price) %></span>
+</div>
+
+<%= link "Add to cart", to: cart_path(@conn, :create, book_id: @book.id), method: :create, class: "button button-primary" %>
+
+<%= if @is_admin do %>
+  <%= link "Edit", to: book_path(@conn, :edit, @book), class: "button" %>
+  <%= link "Delete", to: book_path(@conn, :delete, @book), method: :delete, data: [confirm: "Are you sure?"], class: "button button-danger" %>
+<% end %>

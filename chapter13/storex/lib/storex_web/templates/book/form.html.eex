@@ -1,0 +1,29 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <div class="form-group">
+    <div class="form-field">
+      <%= label f, :title %>
+      <%= error_tag f, :title %>
+      <%= text_input f, :title %>
+    </div>
+
+    <div class="form-field">
+      <%= label f, :image_url %>
+      <%= error_tag f, :image_url %>
+      <%= text_input f, :image_url %>
+    </div>
+
+    <div class="form-field">
+      <%= label f, :price %>
+      <%= error_tag f, :price %>
+      <%= text_input f, :price %>
+    </div>
+
+    <div class="form-field">
+      <%= label f, :description %>
+      <%= error_tag f, :description %>
+      <%= textarea f, :description %>
+    </div>
+  </div>
+
+  <%= submit @label, class: "button button-primary" %>
+<% end %>

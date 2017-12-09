@@ -1,0 +1,3 @@
+<h1>Edit book</h1>
+
+<%= render "form.html", changeset: @changeset, action: book_path(@conn, :update, @book.id), label: "Update" %>

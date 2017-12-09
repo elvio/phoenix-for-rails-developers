@@ -1,0 +1,34 @@
+<h1>Checkout</h1>
+
+<%= form_for @changeset, checkout_path(@conn, :create), fn f -> %>
+  <div class="form-group">
+    <h2>Order information</h2>
+
+    <dl>
+      <dt>Number of items</dt>
+      <dd><%= @items_count %></dd>
+    </dl>
+
+    <dl>
+      <dt>Total price</dt>
+      <dd><%= format_price(@total_price) %></dd>
+    </dl>
+  </div>
+
+  <div class="form-group">
+    <h2>Shipping information</h2>
+
+    <div class="form-field">
+      <label>Recipient</label>
+      <span class="value"><%= @current_user.full_name %></span>
+    </div>
+
+    <div class="form-field">
+      <%= label f, :address %>
+      <%= error_tag f, :address %>
+      <%= text_input f, :address %>
+    </div>
+  </div>
+
+  <%= submit "Buy!", class: "button button-primary" %>
+<% end %>

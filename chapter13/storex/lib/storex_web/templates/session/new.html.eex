@@ -1,0 +1,19 @@
+<h1>Sign in</h1>
+
+<%= form_for @conn, session_path(@conn, :create), [as: :credentials], fn f -> %>
+  <div class="form-group">
+    <div class="form-field">
+      <%= label f, :email %>
+      <%= error_tag f, :email %>
+      <%= email_input f, :email %>
+    </div>
+
+    <div class="form-field">
+      <%= label f, :password %>
+      <%= error_tag f, :password %>
+      <%= password_input f, :password %>
+    </div>
+  </div>
+
+  <%= submit "Sign in", class: "button button-primary" %>
+<% end %>

@@ -1,0 +1,15 @@
+<section class="book-list">
+  <ul class="grid">
+    <%= for book <- @books do %>
+      <li class="grid-item">
+        <div class="book book-small">
+          <%= link to: book_path(@conn, :show, book.id) do %>
+            <img class="book__image" src="<%= book.image_url %>">
+            <h2 class="book__title"><%= book.title %></h2>
+          <% end %>
+          <span class="book__price"><%= format_price(book.price) %></span>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</section>

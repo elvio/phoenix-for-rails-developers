@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #F7F9FA;
+  padding: 40px 0;
+}
+
+dl {
+}
+
+dt {
+	display: inline;
+}
+
+dd {
+	display: block;
+	margin-bottom: 20px;
+	color: #8797AE;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: #4A90E2;
+}
+
+.alternative {
+	margin-top: 50px;
+}
+
+.alert {
+	border: 1px solid black;
+	padding: 10px 0;
+	text-align: center;
+}
+
+.alert.alert-info {
+	background: #ECF4E4;
+	border-color: #C9ECAA;
+	color: #99BE79;
+}
+
+.alert.alert-danger {
+	background: #FFF2F2;
+	border-color: #FFCCCC;
+	color: #EF8686;
+}
+
+.help-block {
+	color: red;
+	font-size: 0.9em;
+	display: block;
+}
+
+.content, .main-nav {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.content h1 {
+  font-size: 1.5em;
+  margin-top: 40px;
+}
+
+.content p {
+  color: #777777;
+}
+
+.main-nav {
+  position: relative;
+  height: 6rem;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #D6DADD;
+}
+
+.main-nav__logo {
+  position: absolute;
+  width: 172px;
+  height: 62px;
+  left: 0;
+  background: url(../images/logo.svg) top center no-repeat;
+}
+
+.main-nav__links {
+  position: absolute;
+  right: 0;
+  top: 1em;
+}
+
+.main-nav__links li {
+  display: inline-block;
+  padding: 0 10px;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #B3CDEB;
+}
+
+.main-nav__links li:last-child {
+  padding-right: 0;
+  border-width: 0;
+}
+
+.badge {
+  background: #E09CA4;
+  color: #FFF;
+  font-size: 0.8em;
+  padding: 0.2em 0.5em;
+  border-radius: 1em;
+}
+
+.grid {
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.grid-item {
+  width: 25%;
+  float: left;
+  box-sizing: border-box;
+}
+
+.book-small {
+  padding: 20px;
+}
+
+.book-small .book__image {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.book-small .book__title {
+  margin-bottom: 3px;
+}
+
+.book-small .book__price {
+  font-weight: 100;
+  color: #8797AE;
+}
+
+.book-hero {
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+.book-hero .book__image, .book-hero .book__description {
+  box-sizing: border-box;
+}
+
+.book-hero .book__image {
+  float: left;
+  width: 33.3333%
+}
+
+.book-hero .book__image img {
+  width: 100%;
+}
+
+.book-hero .book__description {
+  float: left;
+  width: 66.6666%;
+  padding-left: 40px;
+}
+
+.value-tag {
+}
+
+.value-tag__title {
+  font-size: 0.9em;
+  font-weight: 100;
+  color: #8797AE;
+  text-transform: uppercase;
+}
+
+.value-tag__content {
+  font-size: 1.3em;
+  font-weight: 100;
+  color: #4A90E2;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	margin-top: 40px;
+	font-size: 0.95em;
+	background-color: #CCC;
+	color: #FFF;
+	cursor: pointer;
+
+	text-shadow:none !important;
+	border:none !important;
+	box-shadow: none !important;
+}
+
+a.button, a.button:hover {
+	color: #FFF;
+}
+
+.button-primary {
+  background-color: #4A90E2;
+}
+
+.button-primary:hover {
+  background: #659CDE;
+}
+
+.button-danger {
+	background-color: red;
+}
+
+.cart-items {
+  font-size: 18px;
+  margin: 40px 0;
+}
+
+.cart-item {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #FFF;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-item:last-child {
+  margin-bottom: 0;
+}
+
+.cart-item__image {
+  box-sizing: border-box;
+  float: left;
+  width: 10%;
+}
+
+.cart-item__title {
+  box-sizing: border-box;
+  float: left;
+  width: 60%;
+  padding-left: 40px;
+  padding-top: 3.5em;
+}
+
+.cart-item__units {
+  box-sizing: border-box;
+  float: left;
+  width: 15%;
+  padding-top: 2.5em;
+}
+
+.cart-item__price {
+  box-sizing: border-box;
+  float: left;
+  width: 15%;
+  padding-top: 2.5em;
+}
+
+.form {
+  margin: 40px 0;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-field:last-child {
+  margin-bottom: 0;
+}
+
+
+.form-field label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.form-field input, textarea {
+  color: #8797AE;
+  padding: 5px 10px;
+  font-size: 1em;
+  width: 250px;
+}
+
+.form-field textarea {
+  height: 100px;
+}
+
+.form-field span.value {
+	color: #8797AE;
+}
+
+.form-group {
+	padding: 10px 0;
+}
+
+.form-group h2 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #8797AE;
+  text-transform: uppercase;
+}
+
+.step {
+	display: inline-block;
+}
+
+.step a {
+	font-size: 0.8em;
+	display: inline-block;
+	margin: 0 3px;
+	padding-left: 5px;
+	width: 15px;
+	height: 20px;
+}
+
+.step.minus a {
+	color: #98484E;
+	background: #F6EAEB;
+}
+
+.step.plus a {
+	color: #5D8745;
+	background: #EFF6EB;
+}

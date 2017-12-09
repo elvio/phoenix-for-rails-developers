@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to Storex</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <a class="main-nav__logo" href="/"></a>
+
+      <ul class="main-nav__links">
+        <%= if @is_admin do %>
+          <li><%= link "New Book", to: book_path(@conn, :new) %></li>
+        <% end %>
+
+        <%= if @current_user do %>
+          <li><%= @current_user.full_name %></li>
+        <% else %>
+          <li><%= link "sign up", to: user_path(@conn, :new) %></li>
+          <li><%= link "sign in", to: session_path(@conn, :new) %></li>
+        <% end %>
+
+        <%= if items_count(@conn) do %>
+          <li>
+            <%= link to: cart_path(@conn, :show) do %>
+            cart <span class="badge"><%= items_count(@conn) %></span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <main class="content">
+      <%= if message=get_flash(@conn, :info) do %>
+        <p class="alert alert-info" role="alert"><%= message %></p>
+      <% end %>
+
+      <%= if message=get_flash(@conn, :error) do %>
+        <p class="alert alert-danger" role="alert"><%= message %></p>
+      <% end %>
+
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>
